@@ -1,0 +1,38 @@
+[
+  {
+    "ID": 1,
+    "Nombre": "main",
+    "Descripcion": "Palabra reservada para la funcion principal",
+    "Tipo": "PALABRA_RESERVADA"
+  } ,
+  {
+    "ID": 2,
+    "Nombre": "int",
+    "Descripcion": "Palabra reservada para la funcion que retorna un entero",
+    "Tipo": "PALABRA_RESERVADA"
+  } ,
+  {
+    "ID": 9,
+    "Nombre": "",
+    "Descripcion": "Numero entero",
+    "Tipo": "NUMERO"
+  },
+  {
+    "ID": 10,
+    "Nombre": "",
+    "Descripcion": "Identificador",
+    "Tipo": "IDENTIFICADOR"
+  },
+  {
+    "ID": 11,
+    "Nombre": "=",
+    "Descripcion": "Operador de asignacion",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 12,
+    "Nombre": "==",
+    "Descripcion": "Operador de igualacion",
+    "Tipo": "OPERADOR"
+  }
+]
