@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.controllers.Scanner;
+
 import java.io.IOException;
 
 public class Main {

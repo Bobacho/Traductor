@@ -1,4 +1,4 @@
-package org.example;
+package org.example.controllers;
 
 import org.example.models.Tipo;
 import org.example.models.Tokens;
@@ -13,7 +13,6 @@ import java.util.List;
 public class Scanner {
     private String sentencia;
     private List<Tokens> plantilla=new ArrayList<>();
-
     private List<Tokens> resultados=new ArrayList<>();
 
 
@@ -64,7 +63,7 @@ public class Scanner {
                 }
                 i=j-1;
                 pointer=sentencia.toCharArray()[i];
-                Tokens tokens=buscarEnLista(token,Tipo.IDENTIFICADOR);
+                Tokens tokens=buscarEnListaID(token,Tipo.IDENTIFICADOR);
                 for(Tokens t:plantilla)
                 {
                     if(token.equals(t.getNombre()))
@@ -87,7 +86,7 @@ public class Scanner {
                 {
                     token+=sentencia.toCharArray()[j];
                 }
-                Tokens tokens=buscarEnLista(token,Tipo.NUMERO);
+                Tokens tokens=buscarEnListaID(token,Tipo.NUMERO);
                 resultados.add(tokens);
                 token="";
                 i=j-1;
@@ -108,8 +107,36 @@ public class Scanner {
                 i=j-1;
                 pointer=sentencia.toCharArray()[i];
             }
+            BuscarDelimitadores:
+            if(existeDelimitador(0,pointer))
+            {
+                int j=i;
+                int indice;
+                for(indice=j-i;j<sentencia.length() && existeDelimitador(indice,sentencia.toCharArray()[j]);j++)
+                {
+                    token+=sentencia.toCharArray()[j];
+                }
+                Tokens tokens=buscarEnLista(token,Tipo.DELIMITADOR);
+                resultados.add(tokens);
+                token="";
+                i=j-1;
+                pointer=sentencia.toCharArray()[i];
+            }
         }
     }
+
+    private boolean existeDelimitador(int indice, char pointer) {
+        for(Tokens t:plantilla)
+        {
+            if(t.getTipo()!=Tipo.DELIMITADOR) continue;
+            if(indice<t.getNombre().length() && t.getNombre().toCharArray()[indice]==pointer)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private boolean existeOperador(int indice,char pointer)
     {
         for(Tokens t:plantilla)
@@ -117,11 +144,14 @@ public class Scanner {
             if(t.getTipo()!=Tipo.OPERADOR) continue;
             if(indice<t.getNombre().length() && t.getNombre().toCharArray()[indice]==pointer)
             {
-                System.out.println(t.getNombre()+""+pointer);
                 return true;
             }
         }
         return false;
+    }
+    public List<Tokens> getListaToken()
+    {
+        return this.resultados;
     }
     public String getResultados()
     {
@@ -138,6 +168,21 @@ public class Scanner {
     }
 
     private Tokens buscarEnLista(String token,Tipo tipo)
+    {
+        Tokens tokens=new Tokens();
+        for(Tokens l:plantilla)
+        {
+            if(token.equals(l.getNombre()) && l.getTipo().equals(tipo))
+            {
+                tokens.setId(l.getId());
+                tokens.setNombre(token);
+                tokens.setDescripcion(l.getDescripcion());
+                tokens.setTipo(l.getTipo());
+            }
+        }
+        return tokens;
+    }
+    private Tokens buscarEnListaID(String token,Tipo tipo)
     {
         Tokens tokens=new Tokens();
         for(Tokens l:plantilla)

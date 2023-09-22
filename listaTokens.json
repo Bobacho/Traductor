@@ -1,13 +1,13 @@
 [
   {
     "ID": 1,
-    "Nombre": "main",
+    "Nombre": "Principal",
     "Descripcion": "Palabra reservada para la funcion principal",
     "Tipo": "PALABRA_RESERVADA"
   } ,
   {
     "ID": 2,
-    "Nombre": "int",
+    "Nombre": "ENT",
     "Descripcion": "Palabra reservada para la funcion que retorna un entero",
     "Tipo": "PALABRA_RESERVADA"
   } ,
@@ -31,8 +31,260 @@
   },
   {
     "ID": 12,
-    "Nombre": "==",
+    "Nombre": "===",
     "Descripcion": "Operador de igualacion",
     "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 13,
+    "Nombre": ";",
+    "Descripcion": "Delimitador de fin de instruccion",
+    "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 3,
+    "Nombre": "REA",
+    "Descripcion": "Palabra reservada para la funcion que retorna un flotante",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 4,
+    "Nombre": "BOL",
+    "Descripcion": "Palabra reservada para la funcion que retorna un booleano",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 5,
+    "Nombre": "CAD",
+    "Descripcion": "Palabra reservada para la funcion que retorna una cadena",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 6,
+    "Nombre": "CHAR",
+    "Descripcion": "Palabra reservada para la funcion que retorna un caracter",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 7,
+    "Nombre": "fijo",
+    "Descripcion": "Palabra reservada para declarar una constante",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 14,
+    "Nombre": "[",
+    "Descripcion": "Operador para indicar inicio de un arreglo",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 15,
+    "Nombre": "]",
+    "Descripcion": "Operador para indicar final de un arreglo",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 16,
+    "Nombre": "\"",
+    "Descripcion": "Operador para indicar el inicio/fin de una cadena",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 17,
+    "Nombre": "Clase",
+    "Descripcion": "Palabra reservada para indicar la declaracion de una clase",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 18,
+    "Nombre": "Publico",
+    "Descripcion": "Palabra reservada para indicar la declaracion de un metodo/atributo publico",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 19,
+    "Nombre": "Privado",
+    "Descripcion": "Palabra reservada para indicar la declaracion de un metodo/atributo privado",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 20,
+    "Nombre": "Protegido",
+    "Descripcion": "Palabra reservada para indicar la declaracion de lo metodo/atributo protegido",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 21,
+    "Nombre": "Atributos",
+    "Descripcion": "Palabra reservada para indicar el inicio de la declaracion de los atributos de una clase",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 22,
+    "Nombre": "Constructor",
+    "Descripcion": "Palabra reservada para indicar el inicio de la declaracion de un constructor de una clase",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 23,
+    "Nombre": "Metodos",
+    "Descripcion": "Palabra reservada para indicar el inicio de la declaracion de los metodos de una clase",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 24,
+    "Nombre": "+",
+    "Descripcion": "Operador para indicar una suma entre enteros/reales",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 25,
+    "Nombre": "-",
+    "Descripcion": "Operador para indicar una resta entre enteros/reales",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 26,
+    "Nombre": "*",
+    "Descripcion": "Operador para indicar una multiplicacion entre enteros/reales",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 27,
+    "Nombre": "/",
+    "Descripcion": "Operador para indicar una division entre enteros/reales",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 28,
+    "Nombre": "**",
+    "Descripcion": "Operador para indicar una potencia entre enteros/reales",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 29,
+    "Nombre": "%",
+    "Descripcion": "Operador para indicar el resto entre enteros/reales",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 30,
+    "Nombre": "<",
+    "Descripcion": "Operador para indicar que un numero es menor que otro numero",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 31,
+    "Nombre": ">",
+    "Descripcion": "Operador para indicar que un numero es mayor que otro numero",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 32,
+    "Nombre": "<=",
+    "Descripcion": "Operador para indicar que un numero es menor o igual que otro numero",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 33,
+    "Nombre": ">=",
+    "Descripcion": "Operador para indicar que un numero es mayor o igual que otro numero",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 34,
+    "Nombre": "=/",
+    "Descripcion": "Operador para indicar que un numero es diferente que otro numero",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 35,
+    "Nombre": "&",
+    "Descripcion": "Operador para indicar un 'y' logico entre dos booleanos",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 36,
+    "Nombre": "|",
+    "Descripcion": "Operador para indicar un 'o' logico entre dos booleanos",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 37,
+    "Nombre": "(",
+    "Descripcion": "Delimitador que indica el inicio de una funcion/metodo/constructor",
+    "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 38,
+    "Nombre": ")",
+    "Descripcion": "Delimitador que indica el fin de una funcion/metodo/constructor",
+    "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 39,
+    "Nombre": "Entrada",
+    "Descripcion": "Palabra reservada para indicar el inicio de una entrada por teclado",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 40,
+    "Nombre": "Salida",
+    "Descripcion": "Palabra reservada para indicar una salida por consola",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 41,
+    "Nombre": "importar",
+    "Descripcion": "Palabra reservada la importacion de una libreria",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 42,
+    "Nombre": "si",
+    "Descripcion": "Palabra reservada para el inicio de una sentencia de control if",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 43,
+    "Nombre": "entonces",
+    "Descripcion": "Palabra reservada para el inicio de una sentencia de control else",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 44,
+    "Nombre": "para",
+    "Descripcion": "Palabra reservada para el inicio de una sentencia de control for",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 45,
+    "Nombre": "mientras",
+    "Descripcion": "Palabra reservada para el inicio de una sentencia de control while",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 46,
+    "Nombre": "Procedimiento",
+    "Descripcion": "Palabra reservada para el inicio de una funcion vacia",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 47,
+    "Nombre": "-[",
+    "Descripcion": "Palabra reservada para el inicio de un comentario",
+    "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 48,
+    "Nombre": "]-",
+    "Descripcion": "Palabra reservada para el fin de un comentario",
+    "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 49,
+    "Nombre": ",",
+    "Descripcion": "Delimitador entre parametros",
+    "Tipo": "DELIMITADOR"
   }
 ]
