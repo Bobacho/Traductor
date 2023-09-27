@@ -48,6 +48,7 @@ public class Scanner {
     }
     public void compile()
     {
+        contieneItemsDesconocidos(sentencia);
         sentencia+="$";
         String token="";
         for(int i=0;i<sentencia.length();i++)
@@ -102,7 +103,15 @@ public class Scanner {
                     token+=sentencia.toCharArray()[j];
                 }
                 Tokens tokens=buscarEnLista(token,Tipo.OPERADOR);
-                resultados.add(tokens);
+                if(tokens.getNombre()!=null) {
+                    resultados.add(tokens);
+                } else {
+                    for(char c:token.toCharArray())
+                    {
+                        Tokens temp=buscarEnLista(c+"",Tipo.OPERADOR);
+                        resultados.add(temp);
+                    }
+                }
                 token="";
                 i=j-1;
                 pointer=sentencia.toCharArray()[i];
@@ -117,12 +126,31 @@ public class Scanner {
                     token+=sentencia.toCharArray()[j];
                 }
                 Tokens tokens=buscarEnLista(token,Tipo.DELIMITADOR);
-                resultados.add(tokens);
+                if(tokens.getNombre()!=null) {
+                    resultados.add(tokens);
+                } else {
+                    for(char c:token.toCharArray())
+                    {
+                        Tokens temp=buscarEnLista(c+"",Tipo.DELIMITADOR);
+                        resultados.add(temp);
+                    }
+                }
                 token="";
                 i=j-1;
                 pointer=sentencia.toCharArray()[i];
             }
         }
+    }
+
+    private void contieneItemsDesconocidos(String sentencia) {
+        for(int i=0;i<256;i++)
+        {
+            if(( i<32 || (i>35 && i<38) || (i>62 && i<65) || i>125) && sentencia.contains((char)i+""))
+            {
+                throw new RuntimeException("Simbolo desconocido:"+(char)i);
+            };
+        }
+
     }
 
     private boolean existeDelimitador(int indice, char pointer) {
