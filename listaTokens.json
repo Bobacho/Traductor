@@ -286,5 +286,17 @@
     "Nombre": ",",
     "Descripcion": "Delimitador entre parametros",
     "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 50,
+    "Nombre": "{",
+    "Descripcion": "Delimitador para iniciar la lista de instrucciones en una funcion/clase",
+    "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 51,
+    "Nombre": "}",
+    "Descripcion": "Delimitador para finalizar la lista de instrucciones en una funcion/clase",
+    "Tipo": "DELIMITADOR"
   }
 ]
