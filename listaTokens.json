@@ -140,7 +140,7 @@
   {
     "ID": 25,
     "Nombre": "-",
-    "Descripcion": "Operador para indicar una resta entre enteros/reales",
+    "Descripcion": "Operador para indicar una resta entre enteros/reales o indicar un numero negativo",
     "Tipo": "OPERADOR"
   },
   {
