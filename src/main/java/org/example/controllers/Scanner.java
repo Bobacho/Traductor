@@ -145,7 +145,7 @@ public class Scanner {
     private void contieneItemsDesconocidos(String sentencia) {
         for(int i=0;i<256;i++)
         {
-            if(( i<32 || (i>35 && i<38) || (i>62 && i<65) || i>125) && sentencia.contains((char)i+""))
+            if(( i<32 || (i>35 && i<37) || (i>62 && i<65) || i>125) && sentencia.contains((char)i+""))
             {
                 throw new RuntimeException("Simbolo desconocido:"+(char)i);
             };
