@@ -188,7 +188,7 @@ public class Scanner {
     }
     private boolean validarNumero(char pointer)
     {
-        return (pointer>47 && pointer<57);
+        return (pointer>47 && pointer<58);
     }
     private boolean validarCaracterParaID(char pointer)
     {
