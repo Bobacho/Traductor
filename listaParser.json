@@ -1,3 +1,117 @@
-{
-
-}
+[
+  {
+    "Vt": "switch",
+    "Vn": "S",
+    "Produccion": ["switch","(","Identificador",")","{","I","}"]
+  },
+  {
+    "Vt": "switch",
+    "Vn": "D",
+    "Produccion": ["S"]
+  },
+  {
+    "Vt": "case",
+    "Vn": "D",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "default",
+    "Vn": "D",
+    "Produccion": [""]
+  },
+  {
+    "Vt": ";",
+    "Vn": "D",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "break",
+    "Vn": "D",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "$",
+    "Vn": "D",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "switch",
+    "Vn": "I",
+    "Produccion": [";","L"]
+  },
+  {
+    "Vt": "case",
+    "Vn": "I",
+    "Produccion": ["case","R",":","L"]
+  },
+  {
+    "Vt": "default",
+    "Vn": "I",
+    "Produccion": ["default",":","L"]
+  },
+  {
+    "Vt": "}",
+    "Vn": "I",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Numero",
+    "Vn": "R",
+    "Produccion": ["Numero","F"]
+  },
+  {
+    "Vt": "..",
+    "Vn": "F",
+    "Produccion": ["..","Numero"]
+  },
+  {
+    "Vt": ":",
+    "Vn": "F",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "switch",
+    "Vn": "L",
+    "Produccion": ["S","P"]
+  },
+  {
+    "Vt": "case",
+    "Vn": "L",
+    "Produccion": ["I"]
+  },
+  {
+    "Vt": "default",
+    "Vn": "L",
+    "Produccion": ["I"]
+  },
+  {
+    "Vt": "{",
+    "Vn": "L",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "break",
+    "Vn": "L",
+    "Produccion": ["break",";","I"]
+  },
+  {
+    "Vt": "case",
+    "Vn": "P",
+    "Produccion": ["I"]
+  },
+  {
+    "Vt": "default",
+    "Vn": "P",
+    "Produccion": ["I"]
+  },
+  {
+    "Vt": "}",
+    "Vn": "P",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "break",
+    "Vn": "P",
+    "Produccion": ["break",";","I"]
+  }
+]
