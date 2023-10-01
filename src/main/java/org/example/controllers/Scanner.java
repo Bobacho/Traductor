@@ -12,13 +12,14 @@ import java.util.List;
 
 public class Scanner {
     private String sentencia;
-    private List<Tokens> plantilla=new ArrayList<>();
+    public List<Tokens> plantilla=new ArrayList<>();
     private List<Tokens> resultados=new ArrayList<>();
 
 
     public Scanner(String sentencia) throws IOException {
         initialize();
         this.sentencia=sentencia;
+        compile();
     }
     private void initialize() throws IOException {
         File reservadas=new File("listaTokens.json");
@@ -183,12 +184,11 @@ public class Scanner {
     }
     public String getResultados()
     {
-        compile();
         return resultados.toString();
     }
     private boolean validarNumero(char pointer)
     {
-        return (pointer>47 && pointer<57);
+        return (pointer>47 && pointer<58);
     }
     private boolean validarCaracterParaID(char pointer)
     {
