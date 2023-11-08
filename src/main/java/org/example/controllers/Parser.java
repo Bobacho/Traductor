@@ -61,9 +61,16 @@ public class Parser {
     {
         int sim=0;
         String x="";
+        List<String> cadenaEntrada=new ArrayList<>();
+        for(int i=0;i<resultados.size();i++)
+        {
+            cadenaEntrada.add((resultados.get(i).getTipo()==Tipo.IDENTIFICADOR)?resultados.get(i).getDescripcion():resultados.get(i).getNombre());
+        }
         do {
-            System.out.println(pila.toString());
+            System.out.println("---------------------------");
+            System.out.println("Pila:"+pila.toString());
             x=pila.peek();
+            System.out.println("Entrada:"+cadenaEntrada);
             System.out.println("X->"+x+"; sim->"+getIdentificadorOvt(resultados.get(sim)));
             if(Vt.contains(x) || x.equals("$"))
             {
@@ -95,11 +102,12 @@ public class Parser {
                 throw new RuntimeException("Error");
             }
         }while(!x.equals("$"));
+        System.out.println("\nSENTENCIA ACEPTADA");
     }
 
     private String getIdentificadorOvt(Tokens token)
     {
-        if(token.getTipo().equals(Tipo.IDENTIFICADOR) || token.getTipo().equals(Tipo.NUMERO))
+        if(token.getTipo().equals(Tipo.IDENTIFICADOR) || token.getTipo().equals(Tipo.NUMERO) || token.getTipo().equals(Tipo.CADENA))
         {
             return token.getDescripcion();
         }

@@ -5,5 +5,6 @@ public enum Tipo {
     PALABRA_RESERVADA,
     IDENTIFICADOR,
     OPERADOR,
-    DELIMITADOR
+    DELIMITADOR,
+    CADENA
 }

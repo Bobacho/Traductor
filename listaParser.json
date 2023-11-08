@@ -1,117 +1,1008 @@
 [
   {
-    "Vt": "switch",
+    "Vt": "importar",
     "Vn": "S",
-    "Produccion": ["switch","(","Identificador",")","{","I","}"]
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
   },
   {
-    "Vt": "switch",
-    "Vn": "D",
-    "Produccion": ["S"]
+    "Vt": "Clase",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
   },
   {
-    "Vt": "case",
-    "Vn": "D",
+    "Vt": "Procedimiento",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "Procedimiento principal",
+    "Vn": "S",
+    "Produccion": ["<Importar>","<Cuerpo>","<Programa principal>"]
+  },
+  {
+    "Vt": "importar",
+    "Vn": "<Importar>",
+    "Produccion": ["importar","Identificador",";","<Importar>"]
+  },
+  {
+    "Vt": "Clase",
+    "Vn": "<Importar>",
     "Produccion": [""]
   },
   {
-    "Vt": "default",
-    "Vn": "D",
+    "Vt": "Procedimiento",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Procedimiento principal",
+    "Vn": "<Importar>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Clase",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Clase>","<Cuerpo>"]
+  },
+  {
+    "Vt": "Procedimiento",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Funcion>","<Cuerpo>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Funcion>","<Cuerpo>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Funcion>","<Cuerpo>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Funcion>","<Cuerpo>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Funcion>","<Cuerpo>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Cuerpo>",
+    "Produccion": ["<Funcion>","<Cuerpo>"]
+  },
+  {
+    "Vt": "Procedimiento principal",
+    "Vn": "<Cuerpo>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Clase",
+    "Vn": "<Clase>",
+    "Produccion": ["Clase","Identificador","{","Atributos",":","{","<Atributos>","}","Constructor","(","<Parametros>",")","{","<Constructor>","}"
+    ,"Metodos",":","{","<Metodos>","}","}"]
+  },
+  {
+    "Vt": "Publico",
+    "Vn": "<Atributos>",
+    "Produccion": ["<Acceso>","<A'>"]
+  },
+  {
+    "Vt": "Privado",
+    "Vn": "<Atributos>",
+    "Produccion": ["<Acceso>","<A'>"]
+  },
+  {
+    "Vt": "Protegido",
+    "Vn": "<Atributos>",
+    "Produccion": ["<Acceso>","<A'>"]
+  },
+  {
+    "Vt": "}",
+    "Vn": "<Atributos>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<A'>",
+    "Produccion": ["Identificador","Identificador",";","<Atributos>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<A'>",
+    "Produccion": ["<Tipo de dato>","Identificador",";","<Atributos>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<A'>",
+    "Produccion": ["<Tipo de dato>","Identificador",";","<Atributos>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<A'>",
+    "Produccion": ["<Tipo de dato>","Identificador",";","<Atributos>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<A'>",
+    "Produccion": ["<Tipo de dato>","Identificador",";","<Atributos>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<A'>",
+    "Produccion": ["<Tipo de dato>","Identificador",";","<Atributos>"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<Parametros>",
+    "Produccion": ["Identificador","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Parametros>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Parametros>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Parametros>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Parametros>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Parametros>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": ")",
+    "Vn": "<Parametros>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": ",",
+    "Vn": "<MasParametros>",
+    "Produccion": [",","P"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "P",
+    "Produccion": ["Identificador","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "P",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "P",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "P",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "P",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "P",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasParametros>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Funcion>",
+    "Produccion": ["<Tipo de dato>","Identificador","(","<Parametros>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Funcion>",
+    "Produccion": ["<Tipo de dato>","Identificador","(","<Parametros>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Funcion>",
+    "Produccion": ["<Tipo de dato>","Identificador","(","<Parametros>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Funcion>",
+    "Produccion": ["<Tipo de dato>","Identificador","(","<Parametros>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Funcion>",
+    "Produccion": ["<Tipo de dato>","Identificador","(","<Parametros>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "Procedimiento",
+    "Vn": "<Funcion>",
+    "Produccion": ["Procedimiento","Identificador","(","<Parametros>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Tipo de dato>","M","<Instrucciones>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Tipo de dato>","M","<Instrucciones>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Tipo de dato>","M","<Instrucciones>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Tipo de dato>","M","<Instrucciones>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Tipo de dato>","M","<Instrucciones>"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["Identificador","L","<Instrucciones>"]
+  },
+  {
+    "Vt": "para",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Sentencia for>","<Instrucciones>"]
+  },
+  {
+    "Vt": "mientras",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Sentencia while>","<Instrucciones>"]
+  },
+  {
+    "Vt": "si",
+    "Vn": "<Instrucciones>",
+    "Produccion": ["<Sentencia if>","<Instrucciones>"]
+  },
+  {
+    "Vt": "}",
+    "Vn": "<Instrucciones>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": ".",
+    "Vn": "L",
+    "Produccion": [".","Identificador","(","<Argumentos>",")","N",";"]
+  },
+  {
+    "Vt": ".",
+    "Vn": "N",
+    "Produccion": [".","Identificador","(","<Argumentos>",")","N"]
+  },
+  {
+    "Vt": "}",
+    "Vn": "N",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "=",
+    "Vn": "K",
+    "Produccion": ["=","K'"]
+  },
+  {
+    "Vt": "=",
+    "Vn": "K'",
+    "Produccion": ["nuevo","Identificador","(","<Argumentos>",")"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "K'",
+    "Produccion": ["<Operacion>"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "K'",
+    "Produccion": ["<Operacion>"]
+  },
+  {
+    "Vt": "Verdadero",
+    "Vn": "K'",
+    "Produccion": ["<Operacion>"]
+  },
+  {
+    "Vt": "Falso",
+    "Vn": "K'",
+    "Produccion": ["<Operacion>"]
+  },
+  {
+    "Vt": "cadena",
+    "Vn": "K'",
+    "Produccion": ["<Operacion>"]
+  },
+  {
+    "Vt": "(",
+    "Vn": "R",
+    "Produccion": ["(","<Argumentos>",")"]
+  },
+  {
+    "Vt": ".",
+    "Vn": "R",
+    "Produccion": ["N"]
+  },
+  {
+    "Vt": "+",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "-",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "*",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "**",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "%",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "/",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "&",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "|",
+    "Vn": "R",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "+",
+    "Vn": "M'",
+    "Produccion": ["+","C'"]
+  },
+  {
+    "Vt": "-",
+    "Vn": "M'",
+    "Produccion": ["Q"]
+  },
+  {
+    "Vt": "*",
+    "Vn": "M'",
+    "Produccion": ["Q"]
+  },
+  {
+    "Vt": "**",
+    "Vn": "M'",
+    "Produccion": ["Q"]
+  },
+  {
+    "Vt": "/",
+    "Vn": "M'",
+    "Produccion": ["Q"]
+  },
+  {
+    "Vt": "&",
+    "Vn": "M'",
+    "Produccion": ["B"]
+  },
+  {
+    "Vt": "|",
+    "Vn": "M'",
+    "Produccion": ["B"]
+  },
+  {
+    "Vt": "-",
+    "Vn": "Q",
+    "Produccion": ["-","numero","A"]
+  },
+  {
+    "Vt": "*",
+    "Vn": "Q",
+    "Produccion": ["*","numero","A"]
+  },
+  {
+    "Vt": "**",
+    "Vn": "Q",
+    "Produccion": ["**","numero","A"]
+  },
+  {
+    "Vt": "/",
+    "Vn": "Q",
+    "Produccion": ["/","numero","A"]
+  },
+  {
+    "Vt": ";",
+    "Vn": "Q",
+    "Produccion": [""]
+  },
+  {
+    "Vt": ",",
+    "Vn": "Q",
     "Produccion": [""]
   },
   {
     "Vt": ";",
-    "Vn": "D",
+    "Vn": "A",
     "Produccion": [""]
   },
   {
-    "Vt": "break",
-    "Vn": "D",
+    "Vt": ",",
+    "Vn": "A",
     "Produccion": [""]
   },
   {
-    "Vt": "$",
-    "Vn": "D",
+    "Vt": "+",
+    "Vn": "A",
+    "Produccion": ["+","numero","A"]
+  },
+  {
+    "Vt": "-",
+    "Vn": "A",
+    "Produccion": ["-","numero","A"]
+  },
+  {
+    "Vt": "*",
+    "Vn": "A",
+    "Produccion": ["*","numero","A"]
+  },
+  {
+    "Vt": "**",
+    "Vn": "A",
+    "Produccion": ["**","numero","A"]
+  },
+  {
+    "Vt": "/",
+    "Vn": "A",
+    "Produccion": ["/","numero","A"]
+  },
+  {
+    "Vt": ";",
+    "Vn": "A'",
     "Produccion": [""]
   },
   {
-    "Vt": "switch",
-    "Vn": "I",
-    "Produccion": [";","L"]
+    "Vt": "+",
+    "Vn": "A'",
+    "Produccion": ["A"]
   },
   {
-    "Vt": "case",
-    "Vn": "I",
-    "Produccion": ["case","R",":","L"]
+    "Vt": "-",
+    "Vn": "A'",
+    "Produccion": ["A"]
   },
   {
-    "Vt": "default",
-    "Vn": "I",
-    "Produccion": ["default",":","L"]
+    "Vt": "*",
+    "Vn": "A'",
+    "Produccion": ["A"]
   },
   {
-    "Vt": "}",
-    "Vn": "I",
+    "Vt": "**",
+    "Vn": "A'",
+    "Produccion": ["A"]
+  },
+  {
+    "Vt": "<",
+    "Vn": "A'",
+    "Produccion": ["U"]
+  },
+  {
+    "Vt": ">",
+    "Vn": "A'",
+    "Produccion": ["U"]
+  },
+  {
+    "Vt": "<=",
+    "Vn": "A'",
+    "Produccion": ["U"]
+  },
+  {
+    "Vt": ">=",
+    "Vn": "A'",
+    "Produccion": ["U"]
+  },
+  {
+    "Vt": "===",
+    "Vn": "A'",
+    "Produccion": ["U"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "C'",
+    "Produccion": ["numero","A'"]
+  },
+  {
+    "Vt": "cadena",
+    "Vn": "C'",
+    "Produccion": ["cadena","C"]
+  },
+  {
+    "Vt": "&",
+    "Vn": "B",
+    "Produccion": ["<Signo logico>","<Logico>","B"]
+  },
+  {
+    "Vt": "|",
+    "Vn": "B",
+    "Produccion": ["<Signo logico>","<Logico>","B"]
+  },
+  {
+    "Vt": "<",
+    "Vn": "U",
+    "Produccion": ["<Signo relacional>","numero","B"]
+  },
+  {
+    "Vt": ">",
+    "Vn": "U",
+    "Produccion": ["<Signo relacional>","numero","B"]
+  },
+  {
+    "Vt": "<=",
+    "Vn": "U",
+    "Produccion": ["<Signo relacional>","numero","B"]
+  },
+  {
+    "Vt": ">=",
+    "Vn": "U",
+    "Produccion": ["<Signo relacional>","numero","B"]
+  },
+  {
+    "Vt": "===",
+    "Vn": "U",
+    "Produccion": ["<Signo relacional>","numero","B"]
+  },
+  {
+    "Vt": ";",
+    "Vn": "U",
     "Produccion": [""]
   },
   {
-    "Vt": "Numero",
-    "Vn": "R",
-    "Produccion": ["Numero","F"]
-  },
-  {
-    "Vt": "..",
-    "Vn": "F",
-    "Produccion": ["..","Numero"]
-  },
-  {
-    "Vt": ":",
-    "Vn": "F",
+    "Vt": ",",
+    "Vn": "U",
     "Produccion": [""]
   },
   {
-    "Vt": "switch",
-    "Vn": "L",
-    "Produccion": ["S","P"]
+    "Vt": "+",
+    "Vn": "C",
+    "Produccion": ["+","cadena","C"]
   },
   {
-    "Vt": "case",
-    "Vn": "L",
-    "Produccion": ["I"]
-  },
-  {
-    "Vt": "default",
-    "Vn": "L",
-    "Produccion": ["I"]
-  },
-  {
-    "Vt": "{",
-    "Vn": "L",
+    "Vt": ";",
+    "Vn": "C",
     "Produccion": [""]
   },
   {
-    "Vt": "break",
-    "Vn": "L",
-    "Produccion": ["break",";","I"]
+    "Vt": ",",
+    "Vn": "C",
+    "Produccion": ["+","cadena","C"]
   },
   {
-    "Vt": "case",
-    "Vn": "P",
-    "Produccion": ["I"]
+    "Vt": "Identificador",
+    "Vn": "M",
+    "Produccion": ["Identificador","=","<Operacion>",";"]
   },
   {
-    "Vt": "default",
-    "Vn": "P",
-    "Produccion": ["I"]
+    "Vt": "para",
+    "Vn": "<Sentencia for>",
+    "Produccion": ["para","(","<Precondicion>",";","<Condicion>","<Postcondicion>",")","{","<Instrucciones>","}"]
   },
   {
-    "Vt": "}",
-    "Vn": "P",
+    "Vt": "Identificador",
+    "Vn": "<Precondicion>",
+    "Produccion": ["Identificador","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Precondicion>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Precondicion>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Precondicion>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Precondicion>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Precondicion>",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": ";",
+    "Vn": "<Precondicion>",
     "Produccion": [""]
   },
   {
-    "Vt": "break",
-    "Vn": "P",
-    "Produccion": ["break",";","I"]
+    "Vt": ",",
+    "Vn": "<MasPrecondicion>",
+    "Produccion": [",","Z"]
+  },
+  {
+    "Vt": ";",
+    "Vn": "<MasPrecondicion>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "Z",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "Z",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "Z",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "Z",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "Z",
+    "Produccion": ["<Tipo de dato>","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "Z",
+    "Produccion": ["Identificador","Identificador","<MasPrecondicion>"]
+  },
+  {
+    "Vt": "Verdadero",
+    "Vn": "<Condicion>",
+    "Produccion": ["<Logico>","B","<MasCondicion>"]
+  },
+  {
+    "Vt": "Falso",
+    "Vn": "<Condicion>",
+    "Produccion": ["<Logico>","B","<MasCondicion>"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "<Condicion>",
+    "Produccion": ["<Logico>","B","<MasCondicion>"]
+  },
+  {
+    "Vt": ",",
+    "Vn": "<MasCondicion>",
+    "Produccion": [",","<Logico>","B","<MasCondicion>"]
+  },
+  {
+    "Vt": ";",
+    "Vn": "<MasCondicion>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": ",",
+    "Vn": "<MasCondicion>",
+    "Produccion": [",","<Logico>","B","<MasCondicion>"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<Postcondicion>",
+    "Produccion": ["<Precondicion>"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Postcondicion>",
+    "Produccion": ["<Precondicion>"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Postcondicion>",
+    "Produccion": ["<Precondicion>"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Postcondicion>",
+    "Produccion": ["<Precondicion>"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Postcondicion>",
+    "Produccion": ["<Precondicion>"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Postcondicion>",
+    "Produccion": ["<Precondicion>"]
+  },
+  {
+    "Vt": ")",
+    "Vn": "<Postcondicion>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "mientras",
+    "Vn": "<Sentencia while>",
+    "Produccion": ["mientras","(","<Condicion>",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "si",
+    "Vn": "<Sentencia if>",
+    "Produccion": ["si","(","<Condicion>",")","{","<Instrucciones>","}","<Contrario>"]
+  },
+  {
+    "Vt": "entonces",
+    "Vn": "<Contrario>",
+    "Produccion": ["entonces","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "para",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "si",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "mientras",
+    "Vn": "<Contrario>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<Argumentos>",
+    "Produccion": ["<Operacion>","<MasArgumentos>"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "<Argumentos>",
+    "Produccion": ["<Operacion>","<MasArgumentos>"]
+  },
+  {
+    "Vt": "Verdadero",
+    "Vn": "<Argumentos>",
+    "Produccion": ["<Operacion>","<MasArgumentos>"]
+  },
+  {
+    "Vt": "Falso",
+    "Vn": "<Argumentos>",
+    "Produccion": ["<Operacion>","<MasArgumentos>"]
+  },
+  {
+    "Vt": ")",
+    "Vn": "<Argumentos>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "<Operacion>",
+    "Produccion": ["Identificador","R","M'"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "<Operacion>",
+    "Produccion": ["numero","A'"]
+  },
+  {
+    "Vt": "Verdadero",
+    "Vn": "<Operacion>",
+    "Produccion": ["Veradadero","B"]
+  },
+  {
+    "Vt": "Falso",
+    "Vn": "<Operacion>",
+    "Produccion": ["Falso","B"]
+  },
+  {
+    "Vt": "cadena",
+    "Vn": "<Operacion>",
+    "Produccion": ["cadena","C"]
+  },
+  {
+    "Vt": ")",
+    "Vn": "<MasArgumentos>",
+    "Produccion": [""]
+  },
+  {
+    "Vt": ",",
+    "Vn": "<MasArgumentos>",
+    "Produccion": [",","Y"]
+  },
+  {
+    "Vt": "Identificador",
+    "Vn": "Y",
+    "Produccion": ["Identificador","R","<MasArgumentos>"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "Y",
+    "Produccion": ["numero","<MasArgumentos>"]
+  },
+  {
+    "Vt": "Verdadero",
+    "Vn": "Y",
+    "Produccion": ["Verdadero","<MasArgumentos>"]
+  },
+  {
+    "Vt": "Falso",
+    "Vn": "Y",
+    "Produccion": ["Falso","<MasArgumentos>"]
+  },
+  {
+    "Vt": "&",
+    "Vn": "<Signo Logico>",
+    "Produccion": ["&"]
+  },
+  {
+    "Vt": "|",
+    "Vn": "<Signo Logico>",
+    "Produccion": ["|"]
+  },
+  {
+    "Vt": "Verdadero",
+    "Vn": "<Logico>",
+    "Produccion": ["Verdadero"]
+  },
+  {
+    "Vt": "Falso",
+    "Vn": "<Logico>",
+    "Produccion": ["Falso"]
+  },
+  {
+    "Vt": "numero",
+    "Vn": "<Logico>",
+    "Produccion": ["numero","U"]
+  },
+  {
+    "Vt": "Procedimiento principal",
+    "Vn": "<Programa principal>",
+    "Produccion": ["Procedimiento principal","(",")","{","<Instrucciones>","}"]
+  },
+  {
+    "Vt": "devolver",
+    "Vn": "<retornar>",
+    "Produccion": ["devolver","<Operacion>",";"]
+  },
+  {
+    "Vt": "ENT",
+    "Vn": "<Tipo de dato>",
+    "Produccion": ["ENT"]
+  },
+  {
+    "Vt": "REA",
+    "Vn": "<Tipo de dato>",
+    "Produccion": ["REA"]
+  },
+  {
+    "Vt": "CAD",
+    "Vn": "<Tipo de dato>",
+    "Produccion": ["CAD"]
+  },
+  {
+    "Vt": "CHAR",
+    "Vn": "<Tipo de dato>",
+    "Produccion": ["CHAR"]
+  },
+  {
+    "Vt": "BOL",
+    "Vn": "<Tipo de dato>",
+    "Produccion": ["BOL"]
   }
 ]

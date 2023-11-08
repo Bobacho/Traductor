@@ -14,7 +14,7 @@
   {
     "ID": 9,
     "Nombre": "",
-    "Descripcion": "Numero entero",
+    "Descripcion": "numero",
     "Tipo": "NUMERO"
   },
   {
@@ -81,12 +81,6 @@
     "ID": 15,
     "Nombre": "]",
     "Descripcion": "Operador para indicar final de un arreglo",
-    "Tipo": "OPERADOR"
-  },
-  {
-    "ID": 16,
-    "Nombre": "\"",
-    "Descripcion": "Operador para indicar el inicio/fin de una cadena",
     "Tipo": "OPERADOR"
   },
   {
@@ -298,5 +292,35 @@
     "Nombre": "}",
     "Descripcion": "Delimitador para finalizar la lista de instrucciones en una funcion/clase",
     "Tipo": "DELIMITADOR"
+  },
+  {
+    "ID": 52,
+    "Nombre": ".",
+    "Descripcion": "Operador para numeros flotantes/metodos",
+    "Tipo": "OPERADOR"
+  },
+  {
+    "ID": 53,
+    "Nombre": "Procedimiento principal",
+    "Descripcion": "Declaracion de metodo principal",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 54,
+    "Nombre": "",
+    "Descripcion": "cadena",
+    "Tipo": "CADENA"
+  },
+  {
+    "ID": 55,
+    "Nombre": "Verdadero",
+    "Descripcion": "Verdadero logico",
+    "Tipo": "PALABRA_RESERVADA"
+  },
+  {
+    "ID": 56,
+    "Nombre": "Falso",
+    "Descripcion": "Falso logico",
+    "Tipo": "PALABRA_RESERVADA"
   }
 ]

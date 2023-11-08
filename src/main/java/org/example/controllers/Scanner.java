@@ -20,6 +20,7 @@ public class Scanner {
         initialize();
         this.sentencia=sentencia;
         compile();
+        eliminarNulos();
     }
     private void initialize() throws IOException {
         File reservadas=new File("listaTokens.json");
@@ -45,6 +46,15 @@ public class Scanner {
             temp.setDescripcion(jsontokens.getJSONObject(i).getString("Descripcion"));
             temp.setTipo(jsontokens.getJSONObject(i).getEnum(Tipo.class,"Tipo"));
             plantilla.add(temp);
+        }
+    }
+    private void eliminarNulos()
+    {
+        for (int i = 0; i < resultados.size(); i++) {
+            if (resultados.get(i).getId() == 0) {
+                resultados.remove(i);
+                i--;
+            }
         }
     }
     public void compile()
@@ -78,6 +88,23 @@ public class Scanner {
                     }
                 }
                 resultados.add(tokens);
+                String subcadena=(resultados.size()>=2)?resultados.get(resultados.size()-2).getNombre()+" "+
+                        resultados.get(resultados.size()-1).getNombre():"";
+                for(Tokens t:plantilla)
+                {
+                    if(!subcadena.isBlank() && subcadena.equals(t.getNombre()))
+                    {
+                        Tokens temp=new Tokens();
+                        temp.setNombre(t.getNombre());
+                        temp.setId(t.getId());
+                        temp.setTipo(t.getTipo());
+                        temp.setDescripcion(t.getDescripcion());
+                        resultados.remove(resultados.size()-1);
+                        resultados.remove(resultados.size()-1);
+                        resultados.add(temp);
+                        break;
+                    }
+                }
                 token="";
             }
             BuscarNumerosEnteros:
@@ -140,7 +167,43 @@ public class Scanner {
                 i=j-1;
                 pointer=sentencia.toCharArray()[i];
             }
+            BuscarCadenas:
+            if((pointer == 34) && (i<sentencia.length()-1))
+            {
+                int j=i+1;
+                String cadena="";
+                for(;j<sentencia.length();j++)
+                {
+                    cadena+=sentencia.charAt(j);
+                }
+                if(!cadena.contains("\""))
+                {
+                    cadena="";
+                }
+                else
+                {
+                    i=cadena.indexOf("\"")+j;
+                    cadena=cadena.substring(0,cadena.indexOf("\""));
+                }
+                if(!cadena.isBlank())
+                {
+                    for(Tokens t:plantilla)
+                    {
+                        if(t.getTipo()==Tipo.CADENA)
+                        {
+                            Tokens temp=new Tokens();
+                            temp.setId(t.getId());
+                            temp.setTipo(t.getTipo());
+                            temp.setNombre(cadena);
+                            temp.setDescripcion(t.getDescripcion());
+                            resultados.add(temp);
+                            break;
+                        }
+                    }
+                }
+            }
         }
+
     }
 
     private void contieneItemsDesconocidos(String sentencia) {
